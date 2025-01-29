@@ -1,3 +1,5 @@
+import 'package:cb016148/screens/home/home_screen.dart';
+import 'package:cb016148/screens/login/login.dart';
 import 'package:cb016148/services/screensize.dart';
 import 'package:cb016148/themes/colors.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +21,13 @@ class Signup extends StatelessWidget {
             width: ScreenSize.screenWidth * 0.8,
             height: ScreenSize.screenHeight * 0.7,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   'Create Account',
-                  style: TextStyle(fontSize: 36),
+                  style: TextStyle(fontSize: 36,
+                  fontFamily: 'Roboto_SemiCondensed-Regular',),
                 ),
                 Text('Join now'),
                 SizedBox(
@@ -103,14 +108,19 @@ class Signup extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: primarycolor,
                       padding: const EdgeInsets.fromLTRB(50, 5, 50, 5)),
                   child: const Text(
                     'Sign Up',
                     style: TextStyle(
-                      fontFamily: 'Actor-Regular',
+                      fontFamily: 'Roboto_SemiCondensed-Regular',
                       color: Colors.white,
                     ),
                   ),
@@ -122,11 +132,19 @@ class Signup extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Already have an account? '),
-                    Text(
-                      'Login',
-                      style: TextStyle(
-                        fontFamily: 'Actor-Regular',
-                        color: Colors.blue,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Login()));
+                      },
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                          color: Colors.blue,
+                        ),
                       ),
                     )
                   ],

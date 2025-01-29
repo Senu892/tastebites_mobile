@@ -1,3 +1,5 @@
+import 'package:cb016148/services/screensize.dart';
+import 'package:cb016148/widgets/navbar.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:cb016148/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -10,62 +12,14 @@ class UserProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFFFE5D9),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset('assets/images/logo.png', height: 25),
-            Container(
-              width: 350,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Customize',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Subscription',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Container(
-                          padding: EdgeInsets.all(4.0),
-                          decoration: BoxDecoration(
-                              color: Color(0xffffc29a),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Text(
-                            'Senu',
-                            style: TextStyle(
-                              fontFamily: 'Actor-Regular',
-                              fontSize: 15,
-                            ),
-                          ))),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
-                ],
-              ),
-            )
-          ],
-        ),
+        title: Text('Profile'),
+        leading: Builder(builder: (BuildContext context) {
+          return IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.chevron_left));
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -96,7 +50,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               'Senudi Wijethunga',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
                                 color: Color(0xff343129),
                               ),
@@ -104,7 +58,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               'senudiwijethunga@gmail.com',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -112,7 +66,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               '0716531637',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -144,7 +98,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               'Shipping Address',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
                                 color: Color(0xffdc6719),
                               ),
@@ -152,7 +106,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               'No. 04 Rosmead Pl, Colombo 07 (00700)',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -160,7 +114,7 @@ class UserProfile extends StatelessWidget {
                             Text(
                               '0716531637',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -187,7 +141,7 @@ class UserProfile extends StatelessWidget {
                         Text(
                           'Recent Orders',
                           style: TextStyle(
-                            fontFamily: 'Actor-Regular',
+                            fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
                             color: Color(0xffdc6719),
                           ),
@@ -210,7 +164,7 @@ class UserProfile extends StatelessWidget {
                                 child: Text(
                                   'Order ID',
                                   style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
+                                    fontFamily: 'Roboto_SemiCondensed-Regular',
                                     fontSize: 13,
                                     color: Color(0xff343129),
                                   ),
@@ -221,7 +175,7 @@ class UserProfile extends StatelessWidget {
                                 child: Text(
                                   'Placed On',
                                   style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
+                                    fontFamily: 'Roboto_SemiCondensed-Regular',
                                     fontSize: 13,
                                     color: Color(0xff343129),
                                   ),
@@ -232,7 +186,7 @@ class UserProfile extends StatelessWidget {
                                 child: Text(
                                   'Items',
                                   style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
+                                    fontFamily: 'Roboto_SemiCondensed-Regular',
                                     fontSize: 13,
                                     color: Color(0xff343129),
                                   ),
@@ -243,7 +197,7 @@ class UserProfile extends StatelessWidget {
                                 child: Text(
                                   'Total',
                                   style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
+                                    fontFamily: 'Roboto_SemiCondensed-Regular',
                                     fontSize: 13,
                                     color: Color(0xff343129),
                                   ),
@@ -253,271 +207,375 @@ class UserProfile extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(4),
-                          width: 430,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
+                          height: ScreenSize.screenHeight * 0.35,
+                          child: SingleChildScrollView(
+                            child: Column(children: [
                               Container(
-                                width: 50,
-                                child: Text(
-                                  '0003',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
+                                padding: EdgeInsets.all(4),
+                                width: 430,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
                                 ),
-                              ),
-                              Container(
-                                width: 70,
-                                child: Text(
-                                  '05.01.2025',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 100,
                                 child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     Container(
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(25),
-                                        color:
-                                            Color(0xffdc6719).withOpacity(0.1),
+                                      width: 50,
+                                      child: Text(
+                                        '0003',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
                                       ),
-                                      child: Image.asset(
-                                          'assets/images/japanese_snacks.png',
-                                          height: 40),
                                     ),
-                                    Column(
-                                      children: [
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
-                                          ),
+                                    Container(
+                                      width: 70,
+                                      child: Text(
+                                        '05.01.2025',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 100,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
+                                              color: Color(0xffdc6719)
+                                                  .withOpacity(0.1),
+                                            ),
+                                            child: Image.asset(
+                                                'assets/images/japanese_snacks.png',
+                                                height: 40),
                                           ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 50,
+                                      child: Text(
+                                        '\$50.52 (Monthly Subscription)',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Container(
-                                width: 50,
-                                child: Text(
-                                  '\$50.52 (Monthly Subscription)',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Divider(
-                          color: Color(0xffdc6719),
-                          thickness: 2,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(4),
-                          width: 430,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 50,
-                                child: Text(
-                                  '0003',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
-                                ),
+                              Divider(
+                                color: Color(0xffdc6719),
+                                thickness: 2,
+                                indent: 10,
+                                endIndent: 10,
                               ),
                               Container(
-                                width: 70,
-                                child: Text(
-                                  '05.01.2025',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
+                                padding: EdgeInsets.all(4),
+                                width: 430,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
                                 ),
-                              ),
-                              Container(
-                                width: 100,
                                 child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     Container(
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(25),
-                                        color:
-                                            Color(0xffdc6719).withOpacity(0.1),
+                                      width: 50,
+                                      child: Text(
+                                        '0003',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
                                       ),
-                                      child: Image.asset(
-                                          'assets/images/japanese_snacks.png',
-                                          height: 40),
                                     ),
-                                    Column(
-                                      children: [
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
-                                          ),
+                                    Container(
+                                      width: 70,
+                                      child: Text(
+                                        '05.01.2025',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 100,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
+                                              color: Color(0xffdc6719)
+                                                  .withOpacity(0.1),
+                                            ),
+                                            child: Image.asset(
+                                                'assets/images/japanese_snacks.png',
+                                                height: 40),
                                           ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 50,
+                                      child: Text(
+                                        '\$50.52 (Monthly Subscription)',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Container(
-                                width: 50,
-                                child: Text(
-                                  '\$50.52 (Monthly Subscription)',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Divider(
-                          color: Color(0xffdc6719),
-                          thickness: 2,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(4),
-                          width: 430,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 50,
-                                child: Text(
-                                  '0003',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
-                                ),
+                              Divider(
+                                color: Color(0xffdc6719),
+                                thickness: 2,
+                                indent: 10,
+                                endIndent: 10,
                               ),
                               Container(
-                                width: 70,
-                                child: Text(
-                                  '05.01.2025',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
+                                padding: EdgeInsets.all(4),
+                                width: 430,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
                                 ),
-                              ),
-                              Container(
-                                width: 100,
                                 child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     Container(
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(25),
-                                        color:
-                                            Color(0xffdc6719).withOpacity(0.1),
+                                      width: 50,
+                                      child: Text(
+                                        '0003',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
                                       ),
-                                      child: Image.asset(
-                                          'assets/images/japanese_snacks.png',
-                                          height: 40),
                                     ),
-                                    Column(
-                                      children: [
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
-                                          ),
+                                    Container(
+                                      width: 70,
+                                      child: Text(
+                                        '05.01.2025',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                        Text(
-                                          'Items',
-                                          style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
-                                            fontSize: 13,
-                                            color: Color(0xff343129),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 100,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
+                                              color: Color(0xffdc6719)
+                                                  .withOpacity(0.1),
+                                            ),
+                                            child: Image.asset(
+                                                'assets/images/japanese_snacks.png',
+                                                height: 40),
                                           ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 50,
+                                      child: Text(
+                                        '\$50.52 (Monthly Subscription)',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
+                              Divider(
+                                color: Color(0xffdc6719),
+                                thickness: 2,
+                                indent: 10,
+                                endIndent: 10,
+                              ),
                               Container(
-                                width: 50,
-                                child: Text(
-                                  '\$50.52 (Monthly Subscription)',
-                                  style: TextStyle(
-                                    fontFamily: 'Actor-Regular',
-                                    fontSize: 13,
-                                    color: Color(0xff343129),
-                                  ),
+                                padding: EdgeInsets.all(4),
+                                width: 430,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Container(
+                                      width: 50,
+                                      child: Text(
+                                        '0003',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 70,
+                                      child: Text(
+                                        '05.01.2025',
+                                        style: TextStyle(
+                                         fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 100,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
+                                              color: Color(0xffdc6719)
+                                                  .withOpacity(0.1),
+                                            ),
+                                            child: Image.asset(
+                                                'assets/images/japanese_snacks.png',
+                                                height: 40),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                              Text(
+                                                'Items',
+                                                style: TextStyle(
+                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontSize: 13,
+                                                  color: Color(0xff343129),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 50,
+                                      child: Text(
+                                        '\$50.52 (Monthly Subscription)',
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontSize: 13,
+                                          color: Color(0xff343129),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ],
+                              Divider(
+                                color: Color(0xffdc6719),
+                                thickness: 2,
+                                indent: 10,
+                                endIndent: 10,
+                              ),
+                            ]),
                           ),
-                        ),
-                        Divider(
-                          color: Color(0xffdc6719),
-                          thickness: 2,
-                          indent: 10,
-                          endIndent: 10,
                         ),
                       ],
                     ),
@@ -529,6 +587,7 @@ class UserProfile extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: NavBar(selectedIndex: 3),
     );
   }
 }

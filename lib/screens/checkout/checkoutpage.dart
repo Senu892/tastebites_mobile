@@ -1,7 +1,8 @@
+import 'package:cb016148/widgets/navbar.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:cb016148/widgets/footer.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+
 
 class Checkout extends StatelessWidget {
   const Checkout({super.key});
@@ -11,62 +12,10 @@ class Checkout extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFFFE5D9),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset('assets/images/logo.png', height: 25),
-            Container(
-              width: 350,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Customize',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Subscription',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Container(
-                          padding: EdgeInsets.all(4.0),
-                          decoration: BoxDecoration(
-                              color: Color(0xffffc29a),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Text(
-                            'Senu',
-                            style: TextStyle(
-                              fontFamily: 'Actor-Regular',
-                              fontSize: 15,
-                            ),
-                          ))),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
-                ],
-              ),
-            )
-          ],
-        ),
+        title:Text('Checkout'),
+        leading: Builder(builder: (BuildContext context){
+          return IconButton(onPressed: () {Navigator.pop(context);}, icon: Icon(Icons.chevron_left));
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -97,7 +46,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               'Senudi Wijethunga',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
                                 color: Color(0xff343129),
                               ),
@@ -105,7 +54,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               'senudiwijethunga@gmail.com',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -113,7 +62,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               '0716531637',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 12,
                                 color: Color(0xff9e9e9e),
                               ),
@@ -232,7 +181,7 @@ class Checkout extends StatelessWidget {
                         Text(
                           'Order Summary',
                           style: TextStyle(
-                            fontFamily: 'Actor-Regular',
+                            fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
                             color: Color(0xffdc6719),
                           ),
@@ -278,7 +227,7 @@ class Checkout extends StatelessWidget {
                                         Text(
                                           'Japanese Snacks',
                                           style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
+                                            fontFamily: 'Roboto_SemiCondensed-Regular',
                                             fontSize: 13,
                                             color: Color(0xff343129),
                                           ),
@@ -286,7 +235,7 @@ class Checkout extends StatelessWidget {
                                         Text(
                                           '\$50.52 (Monthly subscription)',
                                           style: TextStyle(
-                                            fontFamily: 'Actor-Regular',
+                                            fontFamily: 'Roboto_SemiCondensed-Regular',
                                             fontSize: 13,
                                             color: Color(0xff343129),
                                           ),
@@ -309,7 +258,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               'Subtotal',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -317,7 +266,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               '\$50.52',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -330,7 +279,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               'Shipping',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -338,7 +287,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               '\$3.00',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -355,7 +304,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               'Total',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -363,7 +312,7 @@ class Checkout extends StatelessWidget {
                             Text(
                               '\$53.52',
                               style: TextStyle(
-                                fontFamily: 'Actor-Regular',
+                                fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 13,
                                 color: Color(0xff343129),
                               ),
@@ -390,7 +339,7 @@ class Checkout extends StatelessWidget {
                           child: Text(
                             'Purchase',
                             style: TextStyle(
-                              fontFamily: 'Actor-Regular',
+                              fontFamily: 'Roboto_SemiCondensed-Regular',
                               fontSize: 15,
                             ),
                           ))),
@@ -401,6 +350,7 @@ class Checkout extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: NavBar(selectedIndex: 2)
     );
   }
 }
