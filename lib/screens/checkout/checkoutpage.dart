@@ -352,9 +352,25 @@ class Checkout extends StatelessWidget {
                                 content: Padding(
                                   padding: EdgeInsets.all(5),
                                   child: Column(
+                                    mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Lottie.network(
-                                          'https://lottie.host/b8d8ee90-cc50-4ec4-ae28-feaa5d20a3d5/KftzApMdwb.lottie')
+                                      Lottie.asset(
+                                        'assets/images/Anime_tick.json',
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        'Order Placed Successfully',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
