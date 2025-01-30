@@ -1,3 +1,5 @@
+import 'package:cb016148/services/screensize.dart';
+import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/footer.dart';
 import 'package:flutter/material.dart';
 
@@ -8,63 +10,15 @@ class Predefined extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFFE5D9),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset('assets/images/logo.png', height: 25),
-            Container(
-              width: 350,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Customize',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Subscription',
-                        style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                        ),
-                      )),
-                  InkWell(
-                      onTap: () {},
-                      child: Container(
-                          padding: EdgeInsets.all(4.0),
-                          decoration: BoxDecoration(
-                              color: Color(0xffffc29a),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Text(
-                            'Senu',
-                            style: TextStyle(
-                              fontFamily: 'Actor-Regular',
-                              fontSize: 15,
-                            ),
-                          ))),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
-                ],
-              ),
-            )
-          ],
-        ),
+        backgroundColor: thirdcolor,
+        title: Text('Japanese Snacks'),
+        leading: Builder(builder: (BuildContext context) {
+          return IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.chevron_left));
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -77,10 +31,10 @@ class Predefined extends StatelessWidget {
                   Text(
                     'Japanese Snacks',
                     style: TextStyle(
-                      fontFamily: 'Actor-Regular',
+                      fontFamily: 'Roboto_SemiCondensed-Regular',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 224, 42, 42),
+                      color: primarycolor,
                     ),
                   ),
                   SizedBox(
@@ -90,13 +44,13 @@ class Predefined extends StatelessWidget {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        border: Border.all(color: Color(0xffdc6719), width: 2)),
+                        border: Border.all(color: primarycolor, width: 2)),
                     child: Text(
                       'Size: Large',
                       style: TextStyle(
-                        fontFamily: 'Actor-Regular',
+                        fontFamily: 'Roboto_SemiCondensed-Regular',
                         fontSize: 15,
-                        color: Color(0xffdc6719),
+                        color: primarycolor,
                       ),
                     ),
                   ),
@@ -107,7 +61,7 @@ class Predefined extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: Color(0xffdc6719).withOpacity(0.1),
+                      color: secondarycolor,
                     ),
                     child: Image.asset('assets/images/japanese_snacks.png',
                         height: 200),
@@ -121,9 +75,10 @@ class Predefined extends StatelessWidget {
                       Text(
                         '\$50.52',
                         style: TextStyle(
-                          fontFamily: 'Actor-Regular',
-                          fontSize: 15,
-                          color: Color(0xff4b9a44),
+                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
                         ),
                       ),
                       SizedBox(
@@ -133,14 +88,13 @@ class Predefined extends StatelessWidget {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            border:
-                                Border.all(color: Color(0xffdc6719), width: 2)),
+                            border: Border.all(color: primarycolor, width: 2)),
                         child: Text(
                           '+ Add to Cart',
                           style: TextStyle(
-                            fontFamily: 'Actor-Regular',
+                            fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
-                            color: Color(0xffdc6719),
+                            color: primarycolor,
                           ),
                         ),
                       ),
@@ -153,13 +107,13 @@ class Predefined extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: 450,
-                        height: 235,
+                        width: ScreenSize.screenWidth * 0.85,
+                        height: ScreenSize.screenHeight * 0.25,
                         decoration: BoxDecoration(
-                            color: Color(0xfffffcf7),
+                            color: secondarycolor,
                             borderRadius: BorderRadius.circular(25),
                             border:
-                                Border.all(color: Color(0xffc6c6c6), width: 2)),
+                                Border.all(color: secondarycolor, width: 2)),
                         child: Column(
                           children: [
                             SizedBox(
@@ -168,13 +122,13 @@ class Predefined extends StatelessWidget {
                             Text('Quantity'),
                             SizedBox(height: 10),
                             Container(
-                              width: 400,
-                              height: 30,
+                              width: ScreenSize.screenWidth * 0.8,
+                              height: ScreenSize.screenWidth * 0.08,
                               decoration: BoxDecoration(
-                                  color: Color(0xfffffcf7),
+                                  color: secondarycolor,
                                   borderRadius: BorderRadius.circular(25),
                                   border: Border.all(
-                                      color: Color(0xffc6c6c6), width: 2)),
+                                      color: secondarycolor, width: 2)),
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
@@ -189,10 +143,10 @@ class Predefined extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                              width: 400,
-                              height: 30,
+                              width: ScreenSize.screenWidth * 0.8,
+                              height: ScreenSize.screenWidth * 0.08,
                               decoration: BoxDecoration(
-                                color: Color(0xffeaeaea),
+                                color: thirdcolor,
                                 borderRadius: BorderRadius.circular(25),
                               ),
                               child: Row(
@@ -216,8 +170,8 @@ class Predefined extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                              width: 400,
-                              height: 30,
+                              width: ScreenSize.screenWidth * 0.8,
+                              height: ScreenSize.screenWidth * 0.08,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
                               ),
@@ -243,26 +197,27 @@ class Predefined extends StatelessWidget {
                       SizedBox(
                         height: 15,
                       ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff4b9a44),
-                          padding: const EdgeInsets.all(9),
-                        ),
-                        child: const Text(
-                          'Buy Now',
-                          style: TextStyle(
-                            fontFamily: 'Actor-Regular',
-                            color: Colors.white,
-                          ),
-                        ),
-                      )
                     ],
                   ),
                 ],
               ),
             ),
-            const Footer(),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primarycolor,
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                ),
+                child: const Text(
+                  'Buy Now',
+                  style: TextStyle(
+                    fontFamily: 'Roboto_SemiCondensed-Regular',
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

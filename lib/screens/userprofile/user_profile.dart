@@ -1,4 +1,5 @@
 import 'package:cb016148/services/screensize.dart';
+import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:cb016148/widgets/footer.dart';
@@ -11,7 +12,7 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFFE5D9),
+        backgroundColor: thirdcolor,
         title: Text('Profile'),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
@@ -29,11 +30,14 @@ class UserProfile extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 25,
+                  ),
                   Container(
                     padding: EdgeInsets.all(4),
                     width: 400,
                     decoration: BoxDecoration(
-                      color: Color(0xffdc6719).withOpacity(0.1),
+                      color: secondarycolor,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Row(
@@ -77,13 +81,13 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 35,
                   ),
                   Container(
                     padding: EdgeInsets.all(4),
                     width: 400,
                     decoration: BoxDecoration(
-                      color: Color(0xffdc6719).withOpacity(0.1),
+                      color: secondarycolor,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Row(
@@ -100,7 +104,7 @@ class UserProfile extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
-                                color: Color(0xffdc6719),
+                                color: primarycolor,
                               ),
                             ),
                             Text(
@@ -125,14 +129,14 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 35,
                   ),
                   Container(
                     padding: EdgeInsets.all(16),
                     width: 450,
                     height: 400,
                     decoration: BoxDecoration(
-                      color: Color(0xffdc6719).withOpacity(0.1),
+                      color: secondarycolor,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Column(
@@ -143,7 +147,7 @@ class UserProfile extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
-                            color: Color(0xffdc6719),
+                            color: primarycolor,
                           ),
                         ),
                         SizedBox(
@@ -153,7 +157,7 @@ class UserProfile extends StatelessWidget {
                           padding: EdgeInsets.all(4),
                           width: 430,
                           decoration: BoxDecoration(
-                            color: Color(0xffffc29a),
+                            color: thirdcolor,
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Row(
@@ -225,7 +229,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '0003',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -236,7 +241,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '05.01.2025',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -251,8 +257,7 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: Color(0xffdc6719)
-                                                  .withOpacity(0.1),
+                                              color: secondarycolor,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -263,7 +268,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -271,7 +277,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -286,7 +293,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '\$50.52 (Monthly Subscription)',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -296,7 +304,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: Color(0xffdc6719),
+                                color: primarycolor,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
@@ -316,7 +324,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '0003',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -327,7 +336,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '05.01.2025',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -342,8 +352,7 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: Color(0xffdc6719)
-                                                  .withOpacity(0.1),
+                                              color: secondarycolor,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -354,7 +363,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -362,7 +372,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -377,7 +388,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '\$50.52 (Monthly Subscription)',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -387,7 +399,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: Color(0xffdc6719),
+                                color: primarycolor,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
@@ -407,7 +419,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '0003',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -418,7 +431,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '05.01.2025',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -433,8 +447,7 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: Color(0xffdc6719)
-                                                  .withOpacity(0.1),
+                                              color: secondarycolor,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -445,7 +458,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -453,7 +467,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -468,7 +483,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '\$50.52 (Monthly Subscription)',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -478,7 +494,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: Color(0xffdc6719),
+                                color: primarycolor,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
@@ -498,7 +514,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '0003',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -509,7 +526,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '05.01.2025',
                                         style: TextStyle(
-                                         fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -524,8 +542,7 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: Color(0xffdc6719)
-                                                  .withOpacity(0.1),
+                                              color: secondarycolor,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -536,7 +553,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -544,7 +562,8 @@ class UserProfile extends StatelessWidget {
                                               Text(
                                                 'Items',
                                                 style: TextStyle(
-                                                  fontFamily: 'Roboto_SemiCondensed-Regular',
+                                                  fontFamily:
+                                                      'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
                                                   color: Color(0xff343129),
                                                 ),
@@ -559,7 +578,8 @@ class UserProfile extends StatelessWidget {
                                       child: Text(
                                         '\$50.52 (Monthly Subscription)',
                                         style: TextStyle(
-                                          fontFamily: 'Roboto_SemiCondensed-Regular',
+                                          fontFamily:
+                                              'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
                                           color: Color(0xff343129),
                                         ),
@@ -569,7 +589,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: Color(0xffdc6719),
+                                color: primarycolor,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
@@ -583,7 +603,6 @@ class UserProfile extends StatelessWidget {
                 ],
               ),
             ),
-            const Footer(),
           ],
         ),
       ),
