@@ -1,3 +1,4 @@
+import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/footer.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFFE5D9),
+        backgroundColor: thirdcolor,
         title: Text('About Us'),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
@@ -57,7 +58,7 @@ class AboutUs extends StatelessWidget {
                                 right: 0,
                                 child: Container(
                                   height: 12,
-                                  color: Color(0xFFFFDAC1),
+                                  color: thirdcolor,
                                 ),
                               ),
                               Text(
@@ -89,11 +90,11 @@ class AboutUs extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFFFDAC1),
-                      foregroundColor: Colors.black,
+                      backgroundColor: primarycolor,
+                      foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(
-                        horizontal: 32,
-                        vertical: 16,
+                        horizontal: 25,
+                        vertical: 10,
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -128,7 +129,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: Color(0xFFFFDAC1),
+                            color: thirdcolor,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Icon(Icons.star, color: Colors.black),
@@ -180,7 +181,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFFDAC1),
+                            color: thirdcolor,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: const Icon(Icons.access_time,
@@ -234,7 +235,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: Color(0xFFFFDAC1),
+                            color: thirdcolor,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Icon(Icons.dashboard_customize,
@@ -269,7 +270,6 @@ class AboutUs extends StatelessWidget {
                 ],
               ),
             ),
-            const Footer(),
           ],
         ),
       ),

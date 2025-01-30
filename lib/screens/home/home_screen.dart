@@ -1,5 +1,6 @@
 import 'package:cb016148/screens/home/widgets/snackbox.dart';
 import 'package:cb016148/screens/snackbox/predefined.dart';
+import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/footer.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,7 @@ class _HomeState extends State<HomeScreen> {
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
+                  SizedBox(height: 30),
                   Text(
                     "A World of",
                     style: TextStyle(
@@ -62,7 +64,7 @@ class _HomeState extends State<HomeScreen> {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                  backgroundColor: primarycolor,
                   padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 child: const Text(
@@ -154,7 +156,6 @@ class _HomeState extends State<HomeScreen> {
                 ),
               ),
             ),
-            const Footer(),
           ],
         ),
       ),
