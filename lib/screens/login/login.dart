@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Colors.white,
         body: Center(
           child: Container(
             decoration: BoxDecoration(
@@ -22,12 +22,13 @@ class Login extends StatelessWidget {
             height: ScreenSize.screenHeight * 0.5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              
               children: [
                 Text(
                   'Login',
-                  style: TextStyle(fontSize: 36,
-                  fontFamily: 'Roboto_SemiCondensed-Regular',),
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontFamily: 'Roboto_SemiCondensed-Regular',
+                  ),
                 ),
                 Text('Please Login in to Continue'),
                 SizedBox(
