@@ -1,6 +1,5 @@
 import 'package:cb016148/screens/login/login.dart';
 import 'package:cb016148/services/screensize.dart';
-import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:flutter/material.dart';

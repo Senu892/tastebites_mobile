@@ -2,7 +2,6 @@ import 'package:cb016148/screens/about/aboutus.dart';
 import 'package:cb016148/screens/checkout/checkoutpage.dart';
 import 'package:cb016148/screens/home/home_screen.dart';
 import 'package:cb016148/screens/userprofile/user_profile.dart';
-import 'package:cb016148/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 

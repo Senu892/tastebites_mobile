@@ -1,7 +1,6 @@
 import 'package:cb016148/screens/home/home_screen.dart';
 import 'package:cb016148/screens/signup/signup.dart';
 import 'package:cb016148/services/screensize.dart';
-import 'package:cb016148/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {

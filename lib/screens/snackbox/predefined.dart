@@ -1,5 +1,4 @@
 import 'package:cb016148/services/screensize.dart';
-import 'package:cb016148/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class Predefined extends StatelessWidget {
