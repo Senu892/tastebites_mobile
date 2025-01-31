@@ -1,8 +1,8 @@
+import 'package:cb016148/screens/login/login.dart';
 import 'package:cb016148/services/screensize.dart';
 import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:cb016148/widgets/footer.dart';
 import 'package:flutter/material.dart';
 
 class UserProfile extends StatelessWidget {
@@ -12,7 +12,7 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: thirdcolor,
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text('Profile'),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
@@ -22,6 +22,7 @@ class UserProfile extends StatelessWidget {
               icon: Icon(Icons.chevron_left));
         }),
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,9 +36,9 @@ class UserProfile extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.all(4),
-                    width: 400,
+                    width: ScreenSize.screenWidth * 0.9,
                     decoration: BoxDecoration(
-                      color: secondarycolor,
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Row(
@@ -56,7 +57,6 @@ class UserProfile extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
-                                color: Color(0xff343129),
                               ),
                             ),
                             Text(
@@ -85,9 +85,9 @@ class UserProfile extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.all(4),
-                    width: 400,
+                    width: ScreenSize.screenWidth * 0.9,
                     decoration: BoxDecoration(
-                      color: secondarycolor,
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Row(
@@ -104,7 +104,7 @@ class UserProfile extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: 'Roboto_SemiCondensed-Regular',
                                 fontSize: 15,
-                                color: primarycolor,
+                                color: Theme.of(context).colorScheme.primary,
                               ),
                             ),
                             Text(
@@ -133,10 +133,10 @@ class UserProfile extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.all(16),
-                    width: 450,
-                    height: 400,
+                    width: ScreenSize.screenWidth * 0.9,
+                    // height: ScreenSize.screenHeight * 0.58,
                     decoration: BoxDecoration(
-                      color: secondarycolor,
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Column(
@@ -147,7 +147,7 @@ class UserProfile extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
-                            color: primarycolor,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
                         SizedBox(
@@ -155,9 +155,8 @@ class UserProfile extends StatelessWidget {
                         ),
                         Container(
                           padding: EdgeInsets.all(4),
-                          width: 430,
                           decoration: BoxDecoration(
-                            color: thirdcolor,
+                            color: Theme.of(context).colorScheme.tertiary,
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Row(
@@ -216,7 +215,6 @@ class UserProfile extends StatelessWidget {
                             child: Column(children: [
                               Container(
                                 padding: EdgeInsets.all(4),
-                                width: 430,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
                                 ),
@@ -232,7 +230,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -244,7 +241,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -257,7 +253,9 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: secondarycolor,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -271,7 +269,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                               Text(
@@ -280,7 +277,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                             ],
@@ -296,7 +292,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -304,14 +299,13 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: primarycolor,
+                                color: Theme.of(context).colorScheme.primary,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
                               ),
                               Container(
                                 padding: EdgeInsets.all(4),
-                                width: 430,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
                                 ),
@@ -327,7 +321,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -339,7 +332,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -352,7 +344,9 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: secondarycolor,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -366,7 +360,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                               Text(
@@ -375,7 +368,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                             ],
@@ -391,7 +383,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -399,14 +390,13 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: primarycolor,
+                                color: Theme.of(context).colorScheme.primary,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
                               ),
                               Container(
                                 padding: EdgeInsets.all(4),
-                                width: 430,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
                                 ),
@@ -422,7 +412,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -434,7 +423,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -447,7 +435,9 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: secondarycolor,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -461,7 +451,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                               Text(
@@ -470,7 +459,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                             ],
@@ -486,7 +474,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -494,14 +481,13 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: primarycolor,
+                                color: Theme.of(context).colorScheme.primary,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
                               ),
                               Container(
                                 padding: EdgeInsets.all(4),
-                                width: 430,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
                                 ),
@@ -517,7 +503,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -529,7 +514,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -542,7 +526,9 @@ class UserProfile extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(25),
-                                              color: secondarycolor,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
                                             ),
                                             child: Image.asset(
                                                 'assets/images/japanese_snacks.png',
@@ -556,7 +542,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                               Text(
@@ -565,7 +550,6 @@ class UserProfile extends StatelessWidget {
                                                   fontFamily:
                                                       'Roboto_SemiCondensed-Regular',
                                                   fontSize: 13,
-                                                  color: Color(0xff343129),
                                                 ),
                                               ),
                                             ],
@@ -581,7 +565,6 @@ class UserProfile extends StatelessWidget {
                                           fontFamily:
                                               'Roboto_SemiCondensed-Regular',
                                           fontSize: 13,
-                                          color: Color(0xff343129),
                                         ),
                                       ),
                                     ),
@@ -589,7 +572,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Divider(
-                                color: primarycolor,
+                                color: Theme.of(context).colorScheme.primary,
                                 thickness: 2,
                                 indent: 10,
                                 endIndent: 10,
@@ -598,6 +581,26 @@ class UserProfile extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).colorScheme.primary,
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    ),
+                    child: const Text(
+                      'Log Out',
+                      style: TextStyle(
+                        fontFamily: 'Roboto_SemiCondensed-Regular',
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],

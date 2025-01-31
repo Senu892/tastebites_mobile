@@ -1,6 +1,5 @@
 import 'package:cb016148/services/screensize.dart';
 import 'package:cb016148/themes/colors.dart';
-import 'package:cb016148/widgets/footer.dart';
 import 'package:flutter/material.dart';
 
 class Predefined extends StatelessWidget {
@@ -10,7 +9,7 @@ class Predefined extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: thirdcolor,
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text('Japanese Snacks'),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
@@ -20,6 +19,7 @@ class Predefined extends StatelessWidget {
               icon: Icon(Icons.chevron_left));
         }),
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -34,7 +34,7 @@ class Predefined extends StatelessWidget {
                       fontFamily: 'Roboto_SemiCondensed-Regular',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: primarycolor,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                   ),
                   SizedBox(
@@ -44,13 +44,15 @@ class Predefined extends StatelessWidget {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        border: Border.all(color: primarycolor, width: 2)),
+                        border: Border.all(
+                            color: Theme.of(context).colorScheme.primary,
+                            width: 2)),
                     child: Text(
                       'Size: Large',
                       style: TextStyle(
                         fontFamily: 'Roboto_SemiCondensed-Regular',
                         fontSize: 15,
-                        color: primarycolor,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                   ),
@@ -61,7 +63,7 @@ class Predefined extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: secondarycolor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                     child: Image.asset('assets/images/japanese_snacks.png',
                         height: 200),
@@ -88,13 +90,15 @@ class Predefined extends StatelessWidget {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: primarycolor, width: 2)),
+                            border: Border.all(
+                                color: Theme.of(context).colorScheme.primary,
+                                width: 2)),
                         child: Text(
                           '+ Add to Cart',
                           style: TextStyle(
                             fontFamily: 'Roboto_SemiCondensed-Regular',
                             fontSize: 15,
-                            color: primarycolor,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
                       ),
@@ -107,13 +111,15 @@ class Predefined extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
                         width: ScreenSize.screenWidth * 0.85,
-                        height: ScreenSize.screenHeight * 0.25,
+                        // height: ScreenSize.screenHeight * 0.25,
                         decoration: BoxDecoration(
-                            color: secondarycolor,
+                            color: Theme.of(context).colorScheme.secondary,
                             borderRadius: BorderRadius.circular(25),
-                            border:
-                                Border.all(color: secondarycolor, width: 2)),
+                            border: Border.all(
+                                color: Theme.of(context).colorScheme.secondary,
+                                width: 2)),
                         child: Column(
                           children: [
                             SizedBox(
@@ -125,10 +131,14 @@ class Predefined extends StatelessWidget {
                               width: ScreenSize.screenWidth * 0.8,
                               height: ScreenSize.screenWidth * 0.08,
                               decoration: BoxDecoration(
-                                  color: secondarycolor,
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
                                   borderRadius: BorderRadius.circular(25),
                                   border: Border.all(
-                                      color: secondarycolor, width: 2)),
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      width: 2)),
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
@@ -146,7 +156,7 @@ class Predefined extends StatelessWidget {
                               width: ScreenSize.screenWidth * 0.8,
                               height: ScreenSize.screenWidth * 0.08,
                               decoration: BoxDecoration(
-                                color: thirdcolor,
+                                color: Theme.of(context).colorScheme.tertiary,
                                 borderRadius: BorderRadius.circular(25),
                               ),
                               child: Row(
@@ -206,7 +216,7 @@ class Predefined extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: primarycolor,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                 ),
                 child: const Text(

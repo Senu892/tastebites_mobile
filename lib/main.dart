@@ -5,6 +5,7 @@ import 'package:cb016148/screens/login/login.dart';
 import 'package:cb016148/screens/signup/signup.dart';
 import 'package:cb016148/screens/snackbox/predefined.dart';
 import 'package:cb016148/services/screensize.dart';
+import 'package:cb016148/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,11 +21,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         themeMode: ThemeMode.system,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        darkTheme: ThemeData.dark(),
-        home: const Signup());
+        theme: LightMode,
+        darkTheme: DarkMode,
+        home: Signup());
   }
 }

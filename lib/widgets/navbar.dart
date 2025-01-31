@@ -24,8 +24,8 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GNav(
-          backgroundColor: Colors.white,
-          activeColor: primarycolor,
+          backgroundColor:  Theme.of(context).colorScheme.background,
+          activeColor: Theme.of(context).colorScheme.primary,
           padding: EdgeInsets.all(10),
           selectedIndex: selectedIndex,
           onTabChange: (index) {

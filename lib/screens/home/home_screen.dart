@@ -1,7 +1,6 @@
 import 'package:cb016148/screens/home/widgets/snackbox.dart';
 import 'package:cb016148/screens/snackbox/predefined.dart';
 import 'package:cb016148/themes/colors.dart';
-import 'package:cb016148/widgets/footer.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +20,7 @@ class _HomeState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -60,11 +60,11 @@ class _HomeState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.fromLTRB(30, 5, 30, 5),
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: primarycolor,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 child: const Text(

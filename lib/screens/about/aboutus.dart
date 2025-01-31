@@ -1,4 +1,4 @@
-import 'package:cb016148/themes/colors.dart';
+// import 'package:cb016148/themes/colors.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +9,10 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: thirdcolor,
-        title: Text('About Us'),
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+        title: Text(
+          'About Us',
+        ),
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
               onPressed: () {
@@ -19,6 +21,7 @@ class AboutUs extends StatelessWidget {
               icon: Icon(Icons.chevron_left));
         }),
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -57,7 +60,7 @@ class AboutUs extends StatelessWidget {
                                 right: 0,
                                 child: Container(
                                   height: 12,
-                                  color: thirdcolor,
+                                  color: Theme.of(context).colorScheme.tertiary,
                                 ),
                               ),
                               Text(
@@ -89,7 +92,7 @@ class AboutUs extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: primarycolor,
+                      backgroundColor: Theme.of(context).colorScheme.primary,
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(
                         horizontal: 25,
@@ -105,14 +108,14 @@ class AboutUs extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.grey[50],
+              color: Theme.of(context).colorScheme.background,
               padding: EdgeInsets.all(24.0),
               child: Column(
                 children: [
                   Container(
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondaryContainer,
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -128,7 +131,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: thirdcolor,
+                            color: Theme.of(context).colorScheme.tertiary,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Icon(Icons.star, color: Colors.black),
@@ -141,6 +144,7 @@ class AboutUs extends StatelessWidget {
                               Text(
                                 'Premium Quality',
                                 style: TextStyle(
+                                  color: Colors.black,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -160,11 +164,10 @@ class AboutUs extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondaryContainer,
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -180,7 +183,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: thirdcolor,
+                            color: Theme.of(context).colorScheme.tertiary,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: const Icon(Icons.access_time,
@@ -194,6 +197,7 @@ class AboutUs extends StatelessWidget {
                               Text(
                                 'Fresh Daily',
                                 style: TextStyle(
+                                  color: Colors.black,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -213,12 +217,10 @@ class AboutUs extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-
-                  // Feature 3
                   Container(
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondaryContainer,
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -234,7 +236,7 @@ class AboutUs extends StatelessWidget {
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: thirdcolor,
+                            color: Theme.of(context).colorScheme.tertiary,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Icon(Icons.dashboard_customize,
@@ -248,6 +250,7 @@ class AboutUs extends StatelessWidget {
                               Text(
                                 'Customizable',
                                 style: TextStyle(
+                                  color: Colors.black,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
