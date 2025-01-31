@@ -1,5 +1,4 @@
 import 'package:cb016148/themes/colors.dart';
-import 'package:cb016148/widgets/footer.dart';
 import 'package:cb016148/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
